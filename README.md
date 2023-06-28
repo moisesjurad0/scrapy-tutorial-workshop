@@ -17,4 +17,15 @@ Steps:
 
 1. Create a Project => `scrapy startproject tutorial`
     1. This will create a tutorial directory and contents.
-1. ...END
+    1. output:
+
+        ```text
+        New Scrapy project 'tutorial', using template directory 'D:\m01.repos\github.1\scrapy-tutorial-workshop\venv\Lib\site-packages\scrapy\templates\project', created in:
+        D:\m01.repos\github.1\scrapy-tutorial-workshop\tutorial
+
+        You can start your first spider with:
+        cd tutorial
+        scrapy genspider example example.com
+        ```
+
+    1. ...
