@@ -10,7 +10,7 @@ Previous Steps:
 1. create requirements.txt file and add (only scrapy /ˈskreɪpaɪ/ is mandatory)
     1. scrapy
     1. ipython
-    1. pprint
+    1. ~~pprint~~ => this is not necessary. pprint is part of the Python standard library
 1. and install it with `pip install -r requirements.txt`
 
 Steps:
