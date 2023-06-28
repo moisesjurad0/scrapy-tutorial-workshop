@@ -28,4 +28,5 @@ Steps:
         scrapy genspider example example.com
         ```
 
-    1. ...
+1. Our first Spider => add `quotes_spider.py`
+1. How to run our spider => go to the project’s top level directory and run: `scrapy crawl quotes`
