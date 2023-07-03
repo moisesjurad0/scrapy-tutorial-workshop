@@ -65,3 +65,14 @@ Steps:
         ```
 
 1. Extracting data in our spider => modify `quotes_spider.py`. A Scrapy spider typically generates many dictionaries containing the data extracted from the page. To do that, we use the yield Python keyword in the callback
+    1. to run the spider and get the output in the log:
+
+        `scrapy crawl quotes`
+
+    1. to run the spider Storing the scraped data (The -O command-line switch overwrites any existing file; use -o instead to append new content to any existing file):
+
+        `scrapy crawl quotes -O quotes.json`
+
+    1. to run spider and store data in "JSON Lines" format:
+
+        `scrapy crawl quotes -o quotes.jsonl`
