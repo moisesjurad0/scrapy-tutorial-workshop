@@ -28,6 +28,38 @@ Steps:
         scrapy genspider example example.com
         ```
 
-1. Our first Spider => add `quotes_spider.py`
+1. Our first Spider => add the file `quotes_spider.py`
 1. How to run our spider => go to the project’s top level directory and run: `scrapy crawl quotes`
-1. A shortcut to the start_requests method => shrink the `quotes_spider.py` (can check it on the git history)).
+1. A shortcut to the start_requests method => shrink the `quotes_spider.py` (can check it on the git history). Try running again the spider and the result will be the same
+1. Extracting data => The best way to learn how to extract data with Scrapy is trying selectors using the Scrapy shell. Run: `scrapy shell 'https://quotes.toscrape.com/page/1/'`
+    1. try inside the shell:
+
+        ```python
+        # inside the shell
+        response.css("title")
+        response.css("title::text").getall()
+        response.css("title").getall()
+        response.css("title::text").get()
+        response.css("title::text")[0].get()
+        response.css("noelement")[0].get()
+        response.css("noelement").get()
+        ```
+
+    2. Besides the getall() and get() methods, you can also use the re() method to extract using regular expressions:
+
+        ```python
+        # inside the shell
+        response.css("title::text").re(r"Quotes.*")
+        response.css("title::text").re(r"Q\w+")
+        response.css("title::text").re(r"(\w+) to (\w+)")
+        ```
+
+    3. In order to find the proper CSS selectors to use, you might find it useful to open the response page from the shell in your web browser using `view(response)`
+    4. Besides CSS, Scrapy selectors also support using XPath expressions:
+
+        ```python
+        # inside the shell
+        response.xpath("//title")
+        response.xpath("//title/text()").get()
+
+        ```
