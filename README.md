@@ -30,3 +30,4 @@ Steps:
 
 1. Our first Spider => add `quotes_spider.py`
 1. How to run our spider => go to the project’s top level directory and run: `scrapy crawl quotes`
+1. A shortcut to the start_requests method => shrink the `quotes_spider.py` (can check it on the git history)).
