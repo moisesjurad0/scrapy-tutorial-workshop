@@ -76,3 +76,5 @@ Steps:
     1. to run spider and store data in "JSON Lines" format:
 
         `scrapy crawl quotes -o quotes.jsonl`
+
+    - In small projects (like the one in this tutorial), that should be enough. However, if you want to perform more complex things with the scraped items, you can write an Item Pipeline. See <https://docs.scrapy.org/en/latest/topics/item-pipeline.html#topics-item-pipeline>
