@@ -63,3 +63,5 @@ Steps:
         response.xpath("//title/text()").get()
 
         ```
+
+1. Extracting data in our spider => modify `quotes_spider.py`. A Scrapy spider typically generates many dictionaries containing the data extracted from the page. To do that, we use the yield Python keyword in the callback
